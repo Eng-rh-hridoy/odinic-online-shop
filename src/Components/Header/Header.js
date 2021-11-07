@@ -6,7 +6,7 @@ import logo from '../../logo.png';
 import './Header.css';
 
 const Header = () => {
-    // Manage Handler 
+    // Manage Toggle Handler 
     const [click, setClick] = useState(false);
     const HandleClick =()=>{
         setClick(!click);
@@ -20,9 +20,6 @@ const Header = () => {
                 </div>
 
                 <nav className="nav">
-                    {/* <button className="toggle-menu-close">
-                        <FontAwesomeIcon icon={faTimesCircle} />
-                    </button> */}
                     <ul className={click ? "nav-menu active" : "nav-menu"}>
                         <li className="nav-item">
                             <NavLink to="/">Home</NavLink>
