@@ -1,20 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import { useEffect } from 'react/cjs/react.development';
 import fakeData from '../../fakeData';
+import Header from '../Header/Header';
+import Products from '../Products/Products';
+import './ProductDetails.css';
 
 const ProductDetails = () => {
-    const {productKey} = useParams();
-    console.log(productKey);
+    const { productKey } = useParams();
+    const product = fakeData.find(item => item.key === productKey);
 
-    useEffect(()=>{
-        const Item = fakeData.find(item => item.key === productKey);
-        
-        console.log(Item.name);
-    }, [])
     return (
         <div>
-            
+            <Header />
+            <Products showDetails={true} product = {product} key={product.key} />
         </div>
     );
 };
