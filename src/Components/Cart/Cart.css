@@ -1,0 +1,7 @@
+.cart-container{
+    display: flex;
+    background-color: darkcyan;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+}
